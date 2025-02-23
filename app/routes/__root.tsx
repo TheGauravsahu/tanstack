@@ -69,7 +69,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
           localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-schema: dark)').matches)
           )`}
         </ScriptOnce>
-        <Header />
+        <Header  />
         <main className="pt-28">{children}</main>
         <Scripts />
         <Toaster />
