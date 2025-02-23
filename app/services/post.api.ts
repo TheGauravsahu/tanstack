@@ -17,3 +17,17 @@ export const createPost = createServerFn()
     });
     return post;
   });
+
+export const getPosts = createServerFn().handler(async () => {
+  const posts = await db.post.findMany({
+    include: {
+      user: {
+        select: {
+          name: true,
+          image: true,
+        },
+      },
+    },
+  });
+  return posts;
+});

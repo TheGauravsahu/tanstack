@@ -39,7 +39,7 @@ function RouteComponent() {
     mutationFn: (data: CreatePostData) => createPost({ data }),
     onSuccess: () => {
       createPostForm.reset();
-      router({ to: "/posts" });
+      router({ to: "/" });
     },
   });
 
